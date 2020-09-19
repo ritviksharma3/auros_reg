@@ -1,2 +1,2 @@
 # auros_reg
- A Website for Registration.
+A Event Website for Gaming Registrations.

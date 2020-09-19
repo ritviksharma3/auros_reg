@@ -1,3 +1,5 @@
+// DO NOT REMOVE -- FILES FOR BACKGROUND PARTICLES
+
 var NodesJs = (function (parameters) {
     t_NodesJs = this;
     t_NodesJs.id = parameters.id;
