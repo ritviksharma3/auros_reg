@@ -66,11 +66,39 @@
                             <b>Trailer</b>
                             <br><br>
                         </h3>
-                        <div class="iframe-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FZbWVEKAj74" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                        <div id="player"></div>
                     </div>
                 </div>
+                
+
+                <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                    width: '100%',
+                    videoId: 'FZbWVEKAj74',
+                    playerVars: { 'autoplay': 1, 'playsinline': 1 },
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                    });
+                }
+
+                // 4. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                    event.target.mute();
+                    event.target.playVideo();
+                }
+                </script>
                 <div class="row" >
                     <div class="col-lg-12 text-center" >
                         <h3 class="section-subheading display-flex" style="font-size: 32px; font-family: 'Roboto', sans-serif; word-spacing: 0.3em; text-align: left; color: #FF5733 ;">Instructions : </h3>
@@ -86,14 +114,14 @@
                     <div class="col-lg-12 text-center" >
                         <h3 class="section-subheading display-flex" style="font-size: 32px; font-family: 'Roboto', sans-serif; word-spacing: 0.3em; text-align: left; color: #FF5733 ;">Teams :</h3>
                         <ol style="list-style-type:lower-norwegian; text-align: left;">
-                            <li>Scout</li>
-                            <li>8bitThug</li>
-                            <li>GodNixon</li>
-                            <li>RakaZone</li>
-                            <li>Mili Kya Mili</li>
-                            <li>HydraBTS</li>
-                            <li>Ghatak</li>
-                            <li>Kronten</li>
+                            <li>Team Scout</li>
+                            <li>Team 8bitThug</li>
+                            <li>Team GodNixon</li>
+                            <li>Team RakaZone</li>
+                            <li>Team Mili Kya Mili</li>
+                            <li>Team HydraBTS</li>
+                            <li>Team Ghatak</li>
+                            <li>Team Kronten</li>
                         </ol>
                     </div>
                 </div>
@@ -112,7 +140,7 @@
                     <div class="col-lg-12 text-center" >
                         <h3 class="section-subheading display-flex" style="font-size: 32px; font-family: 'Roboto', sans-serif; word-spacing: 0.3em; text-align: left; color: #FF5733 ;">Tournament Type :</h3>
                         <ul style="text-align: left;">
-                            <li>Single Elimination BO3s</li>
+                            <li>Double Elimination</li>
                         </ul>
                     </div>
                 </div>
