@@ -133,10 +133,10 @@ body {
   width: 100%;
 }
 .content {
-  max-width: 600px;
+  /* max-width: 600px; */
   width: 100%;
   min-width: 260px;
-  margin: 0 5%;
+  /* margin: 0 5%; */
   margin-top: 10%;
   transition: 0.3s ease;
   /* Tabs menu */
@@ -169,7 +169,7 @@ body {
   outline: none;
   cursor: pointer;
   /*change depending on the number of tabs*/
-  width: 25%;
+  width: 50%;
   height: 80px;
   position: relative;
   display: flex;
@@ -214,14 +214,14 @@ body {
   z-index: 0;
   border-right: 0px;
   border-left: 0px;
-  height: 110px;
+  /* height: 110px; */
   bottom: 0px;
   overflow: hidden;
 }
 @media screen and (max-width: 512px) {
-  .tablinks.active {
+  /* .tablinks.active {
     height: 60px;
-  }
+  } */
 }
 .tablinks.active:before {
   content: "";
@@ -289,7 +289,7 @@ body {
   /* tab content */
 }
 .wrapper_tabcontent {
-  background-color: white;
+  background-color: black;
   margin-top: 0px;
   z-index: -3;
   position: relative;
@@ -334,20 +334,21 @@ body {
   top: 75px;
   transform: rotate(90deg);
   position: absolute;
-  left: -90px;
-  opacity: 0.1;
+  left: -80px;
+  opacity: 0.5;
   width: 200px;
   height: 60px;
-  background: -webkit-linear-gradient(135deg, #FF5733 0%, #000 100%);
+  background: -webkit-linear-gradient(135deg, #fff 0%, #FF5733 50%);
+  /* background: #FF5733; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0;
   animation: city 1s ease;
 }
 @media screen and (max-width: 512px) {
-  .tabcontent h3 {
+  /* .tabcontent h3 {
     top: 65px;
-  }
+  } */
 }
 @keyframes city {
   /* Text*/
@@ -355,7 +356,7 @@ body {
     left: -150px;
   }
   to {
-    left: -90px;
+    left: -80px;
   }
 }
 .tabcontent p {
@@ -375,6 +376,13 @@ body {
     font-size: 14px;
     line-height: 26px;
   }
+  .tabs p{
+    font-size: 12px !important;
+  }
+  
+  .video{ 
+    height:"500"
+  }
 }
 @keyframes fadeEffect {
   from {
@@ -385,4 +393,43 @@ body {
     opacity: 1;
     margin-left: 0;
   }
+}
+/* a{
+  color: white;
+} */
+
+.btn-get-started a{
+  color: white;
+}
+
+.btn-get-started:hover{
+  color: black;
+  background-color: white !important;
+}
+.btn-get-started{
+  background-color: black;
+  color: white;
+}
+
+.btn-get-started a:hover{
+  color: black;
+}
+
+/* .wrapper_tabcontent h3{
+  color: #2e2e2e;
+} */
+
+.tabs p{
+  font-size: 30px;
+}
+
+.line h1:after {
+  content:''; 
+  display:block; 
+  width:80px;
+  height:4px; 
+  background:#FF5733;;
+  margin:0 auto; 
+  margin-top:15px; 
+  border-radius:3px;
 }
